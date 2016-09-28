@@ -20,6 +20,10 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>servlet.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ElimilinarCliente</servlet-name>
+        <servlet-class>servlet.ElimilinarCliente</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListarCliente</servlet-name>
         <url-pattern>/ListarCliente</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ElimilinarCliente</servlet-name>
+        <url-pattern>/ElimilinarCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

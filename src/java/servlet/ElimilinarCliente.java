@@ -5,22 +5,19 @@
  */
 package servlet;
 
-import dao.DAOControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import dao.DAOControlador;
 
 /**
  *
  * @author equipo
  */
-
-
-public class ListarCliente extends HttpServlet {
+public class ElimilinarCliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,27 +30,17 @@ public class ListarCliente extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-   
-       //aca listarCliente paso los datos para listar en jsp
-        request.setAttribute("listarCliente", DAOControlador.listarCliente());
-        request.getRequestDispatcher("WEB-INF/JSP/Vistas/listado_clientes.jsp").forward(request, response);
-       // rd.forward(request, response);
+       
         
-        /*
-        try {
-           
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ListarCliente</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ListarCliente at " + request.getContextPath() + "sdgasdgasdgasd</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {
-            out.close();
-        }*/
+        String idTemp = request.getParameter("id");
+        int id = Integer.parseInt(idTemp);
+        ListarCliente  da = new ListarCliente();
+        da.delete(id);
+        
+        response.sendRedirect("/ListarCliente");
+        
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -94,9 +81,5 @@ public class ListarCliente extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-    void delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }
