@@ -30,7 +30,7 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-         request.getRequestDispatcher("WEB-INF/JSP/login.jsp").forward(request, response);
+         request.getRequestDispatcher("WEB-INF/JSP/Vistas/login.jsp").forward(request, response);
       
     }
 
