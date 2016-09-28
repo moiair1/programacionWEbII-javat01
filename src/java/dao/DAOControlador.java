@@ -53,33 +53,7 @@ public class DAOControlador {
 	}
     
     
-    /*
-    
-    
-    public void agregarCliente(Cliente cliente ) {
-		try {
-                    
-           		String query = "insert into clientes (dni, apellido, nombre, Fecha_nac, nacionalidad_id, activo) values (?,?,?,?,?,?)";
-			PreparedStatement preparedStatement = Conexion.getPreparedStatement(query);
-			preparedStatement.setInt(1, cliente.getDni());
-			preparedStatement.setString( 2, cliente.getApellido() );
-                        preparedStatement.setString(3, cliente.getNombre());
-                        preparedStatement.setDate(4,new java.sql.Date(cliente.getFecha_nac().getTime()));
-			preparedStatement.setInt(5, cliente.getNacionalidad_id());
-                        preparedStatement.setInt(6, cliente.getActivo());
-			preparedStatement.executeUpdate();
-                       
-			preparedStatement.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-	  } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DAOControlador.class.getName()).log(Level.SEVERE, null, ex);
-        }
-     
-                
-	}
-    
-    */
+
     
     
     
