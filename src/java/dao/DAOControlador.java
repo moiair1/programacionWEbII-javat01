@@ -151,7 +151,19 @@ public class DAOControlador {
         
  
 
+public void eliminar(int id){
+        try {
+            String sql = "delete Clientes where id = ?";
+            PreparedStatement ps = Conexion.getPreparedStatement(sql);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+  
+    }   catch (ClassNotFoundException ex) {
+            Logger.getLogger(DAOControlador.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(DAOControlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-
+}
 }
 

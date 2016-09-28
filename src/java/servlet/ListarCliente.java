@@ -37,23 +37,7 @@ public class ListarCliente extends HttpServlet {
        //aca listarCliente paso los datos para listar en jsp
         request.setAttribute("listarCliente", DAOControlador.listarCliente());
         request.getRequestDispatcher("WEB-INF/JSP/Vistas/listado_clientes.jsp").forward(request, response);
-       // rd.forward(request, response);
-        
-        /*
-        try {
-           
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ListarCliente</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ListarCliente at " + request.getContextPath() + "sdgasdgasdgasd</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {
-            out.close();
-        }*/
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
