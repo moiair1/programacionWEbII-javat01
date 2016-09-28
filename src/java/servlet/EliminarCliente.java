@@ -17,7 +17,7 @@ import dao.DAOControlador;
  *
  * @author equipo
  */
-public class ElimilinarCliente extends HttpServlet {
+public class EliminarCliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,8 +34,8 @@ public class ElimilinarCliente extends HttpServlet {
         
         String idTemp = request.getParameter("id");
         int id = Integer.parseInt(idTemp);
-        ListarCliente  da = new ListarCliente();
-        da.delete(id);
+        DAOControlador da = new DAOControlador();
+        da.eliminar(id);
         
         response.sendRedirect("/ListarCliente");
         

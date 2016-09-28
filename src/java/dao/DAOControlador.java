@@ -153,7 +153,8 @@ public class DAOControlador {
 
 public void eliminar(int id){
         try {
-            String sql = "delete Clientes where id = ?";
+            String sql = "DELETE FROM  clientes where id = ?";
+                        
             PreparedStatement ps = Conexion.getPreparedStatement(sql);
             ps.setInt(1, id);
             ps.executeUpdate();

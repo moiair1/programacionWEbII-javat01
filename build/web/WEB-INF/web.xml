@@ -22,7 +22,7 @@
     </servlet>
     <servlet>
         <servlet-name>ElimilinarCliente</servlet-name>
-        <servlet-class>servlet.ElimilinarCliente</servlet-class>
+        <servlet-class>servlet.EliminarCliente</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ListarCliente</servlet-name>

@@ -86,7 +86,7 @@
             
             <div align="right"  >
                 
-              
+           
                 <a href="EditarCliente?id=${p.id}"  class="btn btn-info" > <span class="glyphicon glyphicon-pencil" aria-hidden="true"> </span>  Editar  </a>
                 <a href="EliminarCliente?id=${p.id}" onclick="return confirm('Deseas Eliminar este Registro?');" class="btn btn-danger"> <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>  Eliminar  </a> 
                 
